@@ -1,1 +1,45 @@
-<p>progress works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Progess Bar</h4>
+                <app-progress-bar
+                    [percentage]="percentage1"
+                    type="warning"
+                ></app-progress-bar>
+                <br />
+                <app-progress-bar
+                    [percentage]="percentage2"
+                    type="success"
+                ></app-progress-bar>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-increaser
+                    colorClass="warning"
+                    [percentage]="percentage1"
+                    legend="Warning Progress"
+                    (update)="changeProgress($event, 1)"
+                ></app-increaser>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-increaser
+                    colorClass="success"
+                    [percentage]="percentage2"
+                    legend="Success Progress"
+                    (update)="changeProgress($event, 2)"
+                ></app-increaser>
+            </div>
+        </div>
+    </div>
+</div>
