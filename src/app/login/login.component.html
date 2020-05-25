@@ -9,8 +9,8 @@
         <div class="card-body">
             <form
                 class="form-horizontal form-material"
-                id="loginform"
-                action="index.html"
+                #form="ngForm"
+                (ngSubmit)="login()"
             >
                 <a href="javascript:void(0)" class="text-center db"
                     ><img

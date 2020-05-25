@@ -5,9 +5,7 @@ import { MultiDataSet, Label } from 'ng2-charts';
 @Component({
     selector: 'app-graphics',
     templateUrl: './graphics.component.html',
-    styles: [`
-        .card {background-color: #e4e4e4;}
-    `],
+    styles: [],
 })
 export class GraphicsComponent implements OnInit {
 
