@@ -1,0 +1,33 @@
+<h4>{{ legend }}</h4>
+<div class="input-group">
+    <div class="input-group-btn">
+        <button
+            class="btn"
+            [class]="'btn-'+type"
+            type="button"
+            (click)="calculateProgress(-5)"
+        >
+            <i class="mdi mdi-minus"></i>
+        </button>
+    </div>
+    <input
+        #progress
+        type="number"
+        name="progress"
+        class="form-control"
+        min="0"
+        max="100"
+        [(ngModel)]="percentage"
+        (ngModelChange)="progressChanged($event)"
+    />
+    <div class="input-group-btn">
+        <button
+            class="btn"
+            [class]="'btn-'+type"
+            type="button"
+            (click)="calculateProgress(+5)"
+        >
+            <i class="mdi mdi-plus"></i>
+        </button>
+    </div>
+</div>
